@@ -1,0 +1,26 @@
+An extremely simple web interface for controlling a servo on a Raspberry Pi
+with no error checking or security whatsover.
+
+Rough installation notes:
+git clone https://github.com/richardghirst/PiBits.git
+cd PiBits/ServoBlaster
+sudo make
+sudo make install
+
+#change the OPTS parameters in this repo servoblaster file to match your servo
+sudo cp servoblaster /etc/init.d/servoblaster
+
+sudo apt-get install apache2
+sudo a2enmod cgid
+
+#edit this repo index.html and change the title to whatever you want
+#change the stepsize to match /etc/init.d/servoblaster
+cp index.html /var/www/html
+
+sudo cp servo.sh /usr/lib/cgi-bin/servo.sh
+
+sudo apache2ctl restart
+
+#find the Pi IP address with hostname -I
+#the web page is as that IP address.  https won't work at this point, use http.
+#move the slider to move the servo...
