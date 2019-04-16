@@ -15,7 +15,7 @@ sudo a2enmod cgid
 
 #edit this repo index.html and change the title to whatever you want
 #change the stepsize to match /etc/init.d/servoblaster
-cp index.html /var/www/html
+cp index.html vario.css /var/www/html
 
 sudo cp servo.sh /usr/lib/cgi-bin/servo.sh
 
