@@ -1,5 +1,5 @@
 An extremely simple web interface for controlling a servo on a Raspberry Pi
-with no error checking or security whatsover.
+with no error checking or security whatsoever.
 
 Rough installation notes:
 git clone https://github.com/richardghirst/PiBits.git
